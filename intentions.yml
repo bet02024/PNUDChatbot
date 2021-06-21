@@ -1,77 +1,27 @@
-version: "2.0"
-
-nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-    - hola
-    - halo
-    - morning
-
-- intent: out_of_scope
-  examples: |
-    - I want to order food
-    - What is 2 + 2?
-    - Who's the US President?
-
-- intent: goodbye
-  examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-    - thanks
-    - thank
-    - thank you
-    - wow
 
 - intent: get_financial_revenues
   examples: |
     - financial revenue
-    - financial reports
-    - financial charts
+    - capital improvement
     - funding revenue
     - receive revenue
     - city revenue
     - revenue
-    - city financial
-    - revenue charts
-    - revenue summary
-    - revenue report
 
 - intent: get_financial_expenditures
   examples: |
     - financial expenditure
     - expense break
     - city budget
+    - total salary
     - department spend
     - annual budget
     - departmental expense
+    - actual
     - budget
     - expenditure
+    - spend
     - expense
-    - city expense
-    - expense charts
-    - expense reports
 
 - intent: get_property_tax_distribution
   examples: |
@@ -80,22 +30,14 @@ nlu:
     - property
     - tax distribution per tax dollar
     - tax distribution chart
-    - tax distribution
-    - tax distribution report
-    - property tax
-    - tax reports
-    - tax charts
-    - tax property
 
 - intent: get_passports_applications_dashboard
   examples: |
     - passports dashboard
     - passports
     - passport
-    - passport historic
-    - passport reports
-    - passport charts
-    - passport statistics
+    - data
+    - passport historic data
 
 - intent: get_city_lobbyists
   examples: |
@@ -111,14 +53,9 @@ nlu:
     - city election
     - election dashboard
     - election
-    - elections
     - voter
-    - election data
-    - elections map
     - vote statistics
-    - election historic
-    - vote maps
-    - city elections
+    - election historic data
 
 - intent: get_govqa_public_records_request
   examples: |
@@ -126,56 +63,47 @@ nlu:
     - citizen request center
     - citizen request
     - record request
-    - public information request
 
 - intent: get_public_records
   examples: |
     - public records
     - laserfiche
     - laserfiche document center
-    - search records
-    - search resolutions
-    - search ordinances
-    - search contracts
-    - search minutes
-    - search laserfiche
-    - resolutions
-    - contracts
-    - minutes
+    - search
+    - resolution
+    - search ordinance
+    - search contract
+    - search minute
 
 - intent: get_legislative_calendar_search
   examples: |
     - legislative calendar
     - legislative agenda
-    - legislative shcedule
-    - legislation calendar
-    - legislation shcedule
-    - legislation agenda
     - legislation
+    - calendar
     - agenda
-    - mettting
+    - board mettting
     - committee meeting
-    - committee calendar
+    - committee
     - committee agenda
     - meeting location
     - meeting date
-    - legislative meeting
 
 - intent: get_building_permits
   examples: |
     - building permits
     - permits
-    - permit
     - permit inspector
     - inspection work
-    - building permit
 
 - intent: get_citizen_request_center
   examples: |
     - citizen request center
     - citizen request
-    - public citizen request
+    - public record
+    - center
     - request center
+    - public record
     - parking meter hours
     - parking citation
     - pothole
@@ -186,33 +114,27 @@ nlu:
     - sidewalk issue
     - municipal records
     - permit records
-    - permit data
     - parcel records
-    - sidewalk
 
 - intent: get_police_to_citizen
   examples: |
     - police to citizen
-    - police
-    - police station
+    - police data
+    - police information
     - arrest
     - bulletin
     - residential security
     - police reports
-    - security
-    - security reports
-    - arrest reports
-    - police bulletin
 
 - intent: get_public_input
   examples: |
     - public input
     - citizen engagement hub
     - engagement hub
-    - citizen engagement
+    - find upcoming
+    - event
     - share input topic
     - recycling cardboard
-    - cardboard
 
 - intent: get_waze_connected_citizen_coral_gables_portal
   examples: |
@@ -223,39 +145,28 @@ nlu:
     - incidents
     - traffic incidents
     - reported incidents
-    - traffic maps
+    - traffic
     - jams
-    - traffic jams
+    - jams
     - crashes
     - wheater
-    - traffic data
-    - traffic reports
-    - traffic incidents
+    - public sentiment
 
 - intent: get_citizen_engagement_survey
   examples: |
     - citizen engagement survey
-    - citizen survey
-    - citizen surveys
+    - survey
     - survey results
     - community engagement survey
-    - citizen survey
-    - engagement survey
-    - survey
-    - surveys
 
 - intent: get_enews
   examples: |
-    - enews
+    - enew sign
     - city of coral gables news
+    - stay update
+    - sign up to stay updated
     - coral gables news
     - subscribe to coral gable news
-    - news
-    - subscribe
-    - coral gables blog
-    - latets news
-    - blog
-    - subscription list
 
 - intent: get_public_works
   examples: |
@@ -268,7 +179,7 @@ nlu:
     - utilities division
     - landscape
     - services division
-    - public works contact
+    - public works contact information
 
 - intent: get_technology
   examples: |
@@ -278,7 +189,7 @@ nlu:
     - smart city
     - engineering framework
     - virtual kiosk
-    - city technology
+    - information technology strategic plan
 
 - intent: get_coral_gables_virtual_tour
   examples: |
@@ -287,16 +198,16 @@ nlu:
     - coral gables
     - virtual
     - coral gables tour
-    - tour
 
 - intent: get_coral_gables_digital_collection
   examples: |
-    - digital collection
+    - gable digital collection
     - drawing property
-    - parcel map
+    - parcel
     - aerial photograph
     - currently historical document photograph
     - oral history
+    - map
 
 - intent: get_coral_gables_talking_book
   examples: |
@@ -304,8 +215,6 @@ nlu:
     - talking book
     - coral gables talking book
     - listen talking book
-    - talking
-    - book
 
 - intent: get_fiu_gis_center
   examples: |
@@ -313,59 +222,65 @@ nlu:
     - gis advisory
     - gis training
     - esri virtual campus
-    - management research
+    - data management research
+    - fiu department
+    - web gis
     - geo spatial
     - gis course
+    - research
     - laboratory
+    - lab instruction
     - gis remote sensing
+    - gis certificate
+    - free workshop
     - spatial modeling
     - geo dataset
-    - gis historical
+    - gis data historical
     - geoportal
     - gis cartography
     - mapping geography
     - crime mapping
+    - gis introduction
     - gis social research
     - geospatial
     - crime analysis
     - geospatial tool
-    - gis center
+    - fiu gis center
     - fiu
-    - crime map
-    - social research
-    - esri
 
 - intent: get_get_the_city_app
   examples: |
     - city app
     - city mobile
     - city apps
-    - nearest parking spot
+    - find the nearest parking
+    - spot
     - search places in the city
     - app store
-    - iphone
     - ios
     - android
     - traffix
+    - in- intent: telligent
     - safety alerts
     - parking
     - paybyphone
     - parkme
     - etaspot
-    - trolley app
+    - trolley
     - ride free
-    - free ride
+    - free
+    - ride
     - freebee
     - download app
-    - parking spot
-    - pay parking
+    - download city app
 
 - intent: get_traffix_link_to_apple_and_google_stores
   examples: |
     - traffix
-    - traffic reporting app
-    - traffic app
-    - traffix app
+    - traffix reporting app
+    - traffic
+    - issues
+    - coral gables traffix
     - download traffix
 
 - intent: get_saferwatch
@@ -374,33 +289,33 @@ nlu:
     - emergency
     - saferwatch app
     - public safety
+    - real time
+    - alert
     - direct line police department
     - individual report incident
     - report crime
     - suspicious activity
     - download saferwatch
-    - direct line police
-    - report suspicious activity
-    - report emergency
 
 - intent: get_orchid_tracker
   examples: |
     - orchid tracker
     - orchid
-    - orchids
-    - orchid restoration
+    - native orchid restoration
     - plant orchid
     - orchid ecosystem
     - orchid pollinator
     - tracking million orchid
     - planting orchid
+    - download orchid tracker
 
 - intent: get_magical_park_app
   examples: |
     - magical park
     - magical park app
     - dinosaur
-    - park cleaning
+    - robot
+    - park clean
     - digital park
     - interactive park
 
@@ -415,28 +330,23 @@ nlu:
 - intent: get_invoice_business_licenses
   examples: |
     - invoice
-    - invoices
     - business license
-    - business licensing
-    - business licenses
     - business service licensing
     - online renewal
     - business tax
     - certificate of use
-    - licensing renewal
 
 - intent: get_permits
   examples: |
     - permit
-    - permits
-    - get permit
+    - permit
     - inspection
     - permit inquiry
     - track permits
     - plan reviewers
     - inspectors
     - permit inspection
-    - permit inspections
+    - permit inspection
     - inspector plan
     - inquiry parcel
 
@@ -452,18 +362,17 @@ nlu:
   examples: |
     - park recreation
     - parks and recreation
-    - parks information
-    - recreation centers
-    - park locations
-    - public parks
+    - parks
     - recreation
+    - centers
+    - park location
+    - public parks
 
 - intent: get_careers_in_coral_gables
   examples: |
     - careers
     - carrer
     - job
-    - jobs
     - job opportunities
     - job listing
     - carrer listing
@@ -472,7 +381,6 @@ nlu:
 - intent: get_vendors_and_bids
   examples: |
     - vendor
-    - vendors
     - vendor registration
     - company info
     - bid syndication
@@ -491,8 +399,6 @@ nlu:
     - residential permit
     - parking residential permit
     - renewal parking residential
-    - parking permit
-    - parking residential
 
 - intent: get_lobbyist_registration_portal
   examples: |
@@ -505,11 +411,9 @@ nlu:
   examples: |
     - city employee portal
     - human resource city employee
+    - self
     - service portal
     - city employee
-    - self service portal
-    - employee portal
-    - human resource portal
 
 - intent: get_financial_transparency
   examples: |
@@ -517,6 +421,7 @@ nlu:
     - finance transparency
     - transparency
     - financial transparency platform
+    - citys budget
 
 - intent: get_city_trees
   examples: |
@@ -526,37 +431,38 @@ nlu:
     - view trees
     - coral gables trees
     - tree location
-    - trees
-    - tree
 
 - intent: get_open_business_data
   examples: |
-    - open business
+    - open business data
     - attraction business directory
     - attraction
-    - attractions
     - arts
     - culture
     - consular corps
     - fitness
     - golf
     - tennis
+    - historical
     - hospitals
-    - medical center
+    - medical
+    - center
     - worship
     - spa
     - hotel
-    - hotels
-    - shops
+    - shop
     - business directory
     - place directory
-    - point of interes
+    - point
+    - of interes
 
 - intent: get_parks
   examples: |
+    - parks
     - parks locations
-    - parks directory
+    - parks information
     - parks maps
+    - coral gables
     - parks
 
 - intent: get_boundaries
@@ -566,6 +472,7 @@ nlu:
     - land use
     - boundary map
     - telecom
+    - overlay
     - fiber smart
 
 - intent: get_business
@@ -576,10 +483,6 @@ nlu:
     - museum maps
     - bicycle store
     - charging stations map
-    - bike
-    - charging station
-    - charging stations
-    - museums
 
 - intent: get_health
   examples: |
@@ -597,22 +500,23 @@ nlu:
     - metro rail
     - maintained
     - roads
+    - trolley stops
     - parking garages
     - parking lots
     - bicycle facilities
     - bicycle
+    - path
     - bike path
     - bike routes
-    - bicycle map
 
 - intent: get_giralda_avenue_promenade_smart_city_iot_sensors
   examples: |
     - giralda avenue
-    - giralda sensor
+    - smart city
+    - iot sensor
     - giralda iot sensor
     - giralda street
     - giralda street sensors
-    - giralda
 
 - intent: get_waterway_gauge_iot_sensors_blue_road_and_cocoplum
   examples: |
@@ -629,7 +533,6 @@ nlu:
     - internet of things
     - open iot sensors
     - discover iot
-    - iot
 
 - intent: get_suite_of_zoning_and_code_enforcement_web_applications_and_maps_in_a_convenient_dashboard
   examples: |
@@ -638,29 +541,30 @@ nlu:
     - code enforcement dashboard
     - land use
     - zoning
-    - parcel center
-    - parcel
+    - parcel information center
+    - parcel information
 
 - intent: get_coral_gables_trolley_route
   examples: |
     - trolley route
     - coral gables trolley route
+    - coral
     - gables trolley
-    - trolley
-    - trolley routes
 
 - intent: get_sustainable_living_web_app_for_the_city_of_coral_gables
   examples: |
     - sustainable living
+    - map
+    - sustainable living
     - sustainable living zones
     - sustainable living areas
     - sustainable living locations
+    - parks
     - green zones
-    - sustainable living map
-    - sustainable
 
 - intent: get_locations_of_evehicle_charging_stations_in_and_around_coral_gables
   examples: |
+    - location
     - evehicle charge station
     - charging station locations
     - charging station map
@@ -668,15 +572,17 @@ nlu:
     - charge station
     - electic car station
     - electric car charging station
-    - electic car
+    - electic
+    - car
 
 - intent: get_properties_and_boundary_for_coral_gables_business_improvement_district
   examples: |
-    - business map
-    - improvement district map
+    - business
+    - improvement district
     - improvement district
     - business district
-    - improvement
+    - improvement district
+    - detail
 
 - intent: get_locations_for_city_of_coral_gables_pet_waste_stations
   examples: |
@@ -684,9 +590,6 @@ nlu:
     - pet stations
     - pet waste map
     - pet waste location
-    - pets stations
-    - dog stations
-    - puppy stations
 
 - intent: get_this_scene_contains_several_3d_feature_class_of_buildings_and_monuments_throughout_the_city_of_coral_gables_in_florida
   examples: |
@@ -727,9 +630,6 @@ nlu:
     - street light locations
     - street light
     - light maps
-    - lights
-    - street lights
-    - city lights
 
 - intent: get_bicycle_routes
   examples: |
@@ -737,7 +637,6 @@ nlu:
     - bike routes
     - bike paths
     - bicycle master plan
-    - bike friendly
 
 - intent: get_historical_resources
   examples: |
@@ -745,8 +644,6 @@ nlu:
     - historic districts
     - historic properties
     - historic map
-    - historic
-    - history
 
 - intent: get_city_services
   examples: |
@@ -754,7 +651,7 @@ nlu:
     - city zones
     - city neighborhood
     - neighborhood team
-    - city leaders
+    - leaders
     - code enforcement field supervisor
     - code enforcement hotline
     - fire inspector
@@ -764,7 +661,7 @@ nlu:
   examples: |
     - election demographic
     - election demographics
-    - election data
+    - election
     - primary
     - election biennial
     - demographics history
@@ -775,7 +672,7 @@ nlu:
     - trolley route
     - trolley stop
     - stops location
-    - trolley stops
+    - trolley
     - route map
 
 - intent: get_explore_coral_gables
@@ -784,6 +681,7 @@ nlu:
     - storm
     - surge damage
     - evacuation
+    - centers
     - hospitals
     - schools
     - roadways
@@ -795,7 +693,6 @@ nlu:
     - coral gables location
     - city location
     - coral gables map
-    - coral gables
 
 - intent: get_waze_map
   examples: |
@@ -834,14 +731,16 @@ nlu:
     - citywide traffic calm
     - citywide traffic calming
     - traffic calming zoning
-    - transportation
+    - traffic
     - calming map
 
 - intent: get_flagler_section
   examples: |
     - flagler section
-    - flager
+    - flagler
+    - flager information
     - flager section
+    - data
     - flager section history
 
 - intent: get_city_covid_19_response_application
@@ -851,6 +750,7 @@ nlu:
     - covid19 response
     - covid resources
     - covid19 resources
+    - covid data
     - covid cases
     - covid deaths
     - hospitalizations
@@ -858,14 +758,12 @@ nlu:
     - florida capacity
     - covid
     - covid19
-    - vaccine
-    - covid test
-    - coronavirus
 
 - intent: get_master_planning_in_coral_gables
   examples: |
     - master planning
     - coral gables planning
+    - coral
     - gables master planning
     - current master plans
 
@@ -873,7 +771,6 @@ nlu:
   examples: |
     - smart city competition
     - city competition
-    - smart city
 
 - intent: get_design_your_coral_gables_smart_city_solutions_contest_2019
   examples: |
@@ -887,12 +784,13 @@ nlu:
   examples: |
     - giralda plaza
     - smart city giralda plaza
+    - giralda
     - giralda plaza location
 
 - intent: get_attractions_pictures
   examples: |
     - attraction pictures
-    - attraction pics
-    - attractions photos
-    - attraction photos
+    - attraction pictures
+    - attractions
+    - photos
     - attractions pics

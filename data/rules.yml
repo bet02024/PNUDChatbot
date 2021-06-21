@@ -2,12 +2,412 @@ version: "2.0"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+
+- rule: Greet
+  steps:
+  - intent: greet
+  - action: utter_ask_what_do_you_need
+
+- rule: out-of-scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- rule: Bye
   steps:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: financial_revenues
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - intent: get_financial_revenues
+  - action: utter_get_financial_revenues
+
+- rule: financial_expenditures
+  steps:
+  - intent: get_financial_expenditures
+  - action: utter_get_financial_expenditures
+
+- rule: property_tax_distribution
+  steps:
+  - intent: get_property_tax_distribution
+  - action: utter_get_property_tax_distribution
+
+- rule: passports_applications_dashboard
+  steps:
+  - intent: get_passports_applications_dashboard
+  - action: utter_get_passports_applications_dashboard
+
+- rule: city_lobbyists
+  steps:
+  - intent: get_city_lobbyists
+  - action: utter_get_city_lobbyists
+
+- rule: city_elections
+  steps:
+  - intent: get_city_elections
+  - action: utter_get_city_elections
+
+- rule: govqa_public_records_request
+  steps:
+  - intent: get_govqa_public_records_request
+  - action: utter_get_govqa_public_records_request
+
+- rule: public_records
+  steps:
+  - intent: get_public_records
+  - action: utter_get_public_records
+
+- rule: legislative_calendar_search
+  steps:
+  - intent: get_legislative_calendar_search
+  - action: utter_get_legislative_calendar_search
+
+- rule: building_permits
+  steps:
+  - intent: get_building_permits
+  - action: utter_get_building_permits
+
+- rule: citizen_request_center
+  steps:
+  - intent: get_citizen_request_center
+  - action: utter_get_citizen_request_center
+
+- rule: police_to_citizen
+  steps:
+  - intent: get_police_to_citizen
+  - action: utter_get_police_to_citizen
+
+- rule: public_input
+  steps:
+  - intent: get_public_input
+  - action: utter_get_public_input
+
+- rule: waze_connected_citizen_coral_gables_portal
+  steps:
+  - intent: get_waze_connected_citizen_coral_gables_portal
+  - action: utter_get_waze_connected_citizen_coral_gables_portal
+
+- rule: citizen_engagement_survey
+  steps:
+  - intent: get_citizen_engagement_survey
+  - action: utter_get_citizen_engagement_survey
+
+- rule: enews
+  steps:
+  - intent: get_enews
+  - action: utter_get_enews
+
+- rule: public_works
+  steps:
+  - intent: get_public_works
+  - action: utter_get_public_works
+
+- rule: technology
+  steps:
+  - intent: get_technology
+  - action: utter_get_technology
+
+- rule: coral_gables_virtual_tour
+  steps:
+  - intent: get_coral_gables_virtual_tour
+  - action: utter_get_coral_gables_virtual_tour
+
+- rule: coral_gables_digital_collection
+  steps:
+  - intent: get_coral_gables_digital_collection
+  - action: utter_get_coral_gables_digital_collection
+
+- rule: coral_gables_talking_book
+  steps:
+  - intent: get_coral_gables_talking_book
+  - action: utter_get_coral_gables_talking_book
+
+- rule: fiu_gis_center
+  steps:
+  - intent: get_fiu_gis_center
+  - action: utter_get_fiu_gis_center
+
+- rule: get_the_city_app
+  steps:
+  - intent: get_get_the_city_app
+  - action: utter_get_get_the_city_app
+
+- rule: traffix_link_to_apple_and_google_stores
+  steps:
+  - intent: get_traffix_link_to_apple_and_google_stores
+  - action: utter_get_traffix_link_to_apple_and_google_stores
+
+- rule: saferwatch
+  steps:
+  - intent: get_saferwatch
+  - action: utter_get_saferwatch
+
+- rule: orchid_tracker
+  steps:
+  - intent: get_orchid_tracker
+  - action: utter_get_orchid_tracker
+
+- rule: magical_park_app
+  steps:
+  - intent: get_magical_park_app
+  - action: utter_get_magical_park_app
+
+- rule: actionbound_app
+  steps:
+  - intent: get_actionbound_app
+  - action: utter_get_actionbound_app
+
+- rule: invoice_business_licenses
+  steps:
+  - intent: get_invoice_business_licenses
+  - action: utter_get_invoice_business_licenses
+
+- rule: permits
+  steps:
+  - intent: get_permits
+  - action: utter_get_permits
+
+- rule: property_leases
+  steps:
+  - intent: get_property_leases
+  - action: utter_get_property_leases
+
+- rule: parks_and_recreation
+  steps:
+  - intent: get_parks_and_recreation
+  - action: utter_get_parks_and_recreation
+
+- rule: careers_in_coral_gables
+  steps:
+  - intent: get_careers_in_coral_gables
+  - action: utter_get_careers_in_coral_gables
+
+- rule: vendors_and_bids
+  steps:
+  - intent: get_vendors_and_bids
+  - action: utter_get_vendors_and_bids
+
+- rule: parking_permit_renewal
+  steps:
+  - intent: get_parking_permit_renewal
+  - action: utter_get_parking_permit_renewal
+
+- rule: lobbyist_registration_portal
+  steps:
+  - intent: get_lobbyist_registration_portal
+  - action: utter_get_lobbyist_registration_portal
+
+- rule: city_employee_portal
+  steps:
+  - intent: get_city_employee_portal
+  - action: utter_get_city_employee_portal
+
+- rule: financial_transparency
+  steps:
+  - intent: get_financial_transparency
+  - action: utter_get_financial_transparency
+
+- rule: city_trees
+  steps:
+  - intent: get_city_trees
+  - action: utter_get_city_trees
+
+- rule: open_business_data
+  steps:
+  - intent: get_open_business_data
+  - action: utter_get_open_business_data
+
+- rule: parks
+  steps:
+  - intent: get_parks
+  - action: utter_get_parks
+
+- rule: boundaries
+  steps:
+  - intent: get_boundaries
+  - action: utter_get_boundaries
+
+- rule: business
+  steps:
+  - intent: get_business
+  - action: utter_get_business
+
+- rule: health
+  steps:
+  - intent: get_health
+  - action: utter_get_health
+
+- rule: housing
+  steps:
+  - intent: get_housing
+  - action: utter_get_housing
+
+- rule: giralda_avenue_promenade_smart_city_iot_sensors
+  steps:
+  - intent: get_giralda_avenue_promenade_smart_city_iot_sensors
+  - action: utter_get_giralda_avenue_promenade_smart_city_iot_sensors
+
+- rule: waterway_gauge_iot_sensors_blue_road_and_cocoplum
+  steps:
+  - intent: get_waterway_gauge_iot_sensors_blue_road_and_cocoplum
+  - action: utter_get_waterway_gauge_iot_sensors_blue_road_and_cocoplum
+
+- rule: discover_open_iot
+  steps:
+  - intent: get_discover_open_iot
+  - action: utter_get_discover_open_iot
+
+- rule: suite_of_zoning_and_code_enforcement_web_applications_and_maps_in_a_convenient_dashboard
+  steps:
+  - intent: get_suite_of_zoning_and_code_enforcement_web_applications_and_maps_in_a_convenient_dashboard
+  - action: utter_get_suite_of_zoning_and_code_enforcement_web_applications_and_maps_in_a_convenient_dashboard
+
+- rule: coral_gables_trolley_route
+  steps:
+  - intent: get_coral_gables_trolley_route
+  - action: utter_get_coral_gables_trolley_route
+
+- rule: sustainable_living_web_app_for_the_city_of_coral_gables
+  steps:
+  - intent: get_sustainable_living_web_app_for_the_city_of_coral_gables
+  - action: utter_get_sustainable_living_web_app_for_the_city_of_coral_gables
+
+- rule: locations_of_evehicle_charging_stations_in_and_around_coral_gables
+  steps:
+  - intent: get_locations_of_evehicle_charging_stations_in_and_around_coral_gables
+  - action: utter_get_locations_of_evehicle_charging_stations_in_and_around_coral_gables
+
+- rule: properties_and_boundary_for_coral_gables_business_improvement_district
+  steps:
+  - intent: get_properties_and_boundary_for_coral_gables_business_improvement_district
+  - action: utter_get_properties_and_boundary_for_coral_gables_business_improvement_district
+
+- rule: locations_for_city_of_coral_gables_pet_waste_stations
+  steps:
+  - intent: get_locations_for_city_of_coral_gables_pet_waste_stations
+  - action: utter_get_locations_for_city_of_coral_gables_pet_waste_stations
+
+- rule: this_scene_contains_several_3d_feature_class_of_buildings_and_monuments_throughout_the_city_of_coral_gables_in_florida
+  steps:
+  - intent: get_this_scene_contains_several_3d_feature_class_of_buildings_and_monuments_throughout_the_city_of_coral_gables_in_florida
+  - action: utter_get_this_scene_contains_several_3d_feature_class_of_buildings_and_monuments_throughout_the_city_of_coral_gables_in_florida
+
+- rule: development_services
+  steps:
+  - intent: get_development_services
+  - action: utter_get_development_services
+
+- rule: hurricane_irma_debris
+  steps:
+  - intent: get_hurricane_irma_debris
+  - action: utter_get_hurricane_irma_debris
+
+- rule: election_precincts
+  steps:
+  - intent: get_election_precincts
+  - action: utter_get_election_precincts
+
+- rule: city_street_lights
+  steps:
+  - intent: get_city_street_lights
+  - action: utter_get_city_street_lights
+
+- rule: bicycle_routes
+  steps:
+  - intent: get_bicycle_routes
+  - action: utter_get_bicycle_routes
+
+- rule: historical_resources
+  steps:
+  - intent: get_historical_resources
+  - action: utter_get_historical_resources
+
+- rule: city_services
+  steps:
+  - intent: get_city_services
+  - action: utter_get_city_services
+
+- rule: election_demographics
+  steps:
+  - intent: get_election_demographics
+  - action: utter_get_election_demographics
+
+- rule: trolley_routes_and_stops
+  steps:
+  - intent: get_trolley_routes_and_stops
+  - action: utter_get_trolley_routes_and_stops
+
+- rule: explore_coral_gables
+  steps:
+  - intent: get_explore_coral_gables
+  - action: utter_get_explore_coral_gables
+
+- rule: coral_gables_location
+  steps:
+  - intent: get_coral_gables_location
+  - action: utter_get_coral_gables_location
+
+- rule: waze_map
+  steps:
+  - intent: get_waze_map
+  - action: utter_get_waze_map
+
+- rule: property_story_map
+  steps:
+  - intent: get_property_story_map
+  - action: utter_get_property_story_map
+
+- rule: broadband_availability
+  steps:
+  - intent: get_broadband_availability
+  - action: utter_get_broadband_availability
+
+- rule: community_vision_quality_places_for_people
+  steps:
+  - intent: get_community_vision_quality_places_for_people
+  - action: utter_get_community_vision_quality_places_for_people
+
+- rule: multimodal_transportation_citywide_traffic_calming
+  steps:
+  - intent: get_multimodal_transportation_citywide_traffic_calming
+  - action: utter_get_multimodal_transportation_citywide_traffic_calming
+
+- rule: flagler_section
+  steps:
+  - intent: get_flagler_section
+  - action: utter_get_flagler_section
+
+- rule: city_covid_19_response_application
+  steps:
+  - intent: get_city_covid_19_response_application
+  - action: utter_get_city_covid_19_response_application
+
+- rule: master_planning_in_coral_gables
+  steps:
+  - intent: get_master_planning_in_coral_gables
+  - action: utter_get_master_planning_in_coral_gables
+
+- rule: smart_city_comp
+  steps:
+  - intent: get_smart_city_comp
+  - action: utter_get_smart_city_comp
+
+- rule: design_your_coral_gables_smart_city_solutions_contest_2019
+  steps:
+  - intent: get_design_your_coral_gables_smart_city_solutions_contest_2019
+  - action: utter_get_design_your_coral_gables_smart_city_solutions_contest_2019
+
+- rule: giralda_plaza_in_a_smart_city
+  steps:
+  - intent: get_giralda_plaza_in_a_smart_city
+  - action: utter_get_giralda_plaza_in_a_smart_city
+
+- rule: attractions_pictures
+  steps:
+  - intent: get_attractions_pictures
+  - action: utter_get_attractions_pictures

@@ -1,0 +1,234 @@
+
+  utter_get_financial_revenues:
+- text: "I found this link for you https://coralgablesfl.opengov.com/transparency#/11028/accountType=revenues&amp;breakdown=types&amp;currentYearAmount=cumulative&amp;currentYearPeriod=years&amp;graph=pie&amp;legendSort=desc&amp;proration=true&amp;saved_view=35992&amp;selection=D6C6B5F2756C65B5C52E6C663B8D477F&amp;year=NaN&amp;selectedDataSetIndex=6&amp;fiscal_start=earliest&amp;fiscal_end=latest"
+
+  utter_get_financial_expenditures:
+- text: "I found this link for you https://coralgablesfl.opengov.com/transparency#/11028/accountType=expenses&amp;breakdown=types&amp;currentYearAmount=cumulative&amp;currentYearPeriod=years&amp;graph=pie&amp;legendSort=desc&amp;proration=true&amp;saved_view=35992&amp;selection=D6C6B5F2756C65B5C52E6C663B8D477F&amp;year=NaN&amp;selectedDataSetIndex=6&amp;fiscal_start=earliest&amp;fiscal_end=latest"
+
+  utter_get_property_tax_distribution:
+- text: "I found this link for you https://coralgablesfl.opengov.com/data#/20716/query=699C798B9FA8556BB4678ABB116ABEF5"
+
+  utter_get_passports_applications_dashboard:
+- text: "I found this link for you https://cgitwebapps.coralgables.com/CGDashboards/CityClerkPassportDashboard.aspx"
+
+  utter_get_city_lobbyists:
+- text: "I found this link for you https://cgitwebapps.coralgables.com/CGDashboards/CityClerkLobbyistsDashboard.aspx"
+
+  utter_get_city_elections:
+- text: "I found this link for you https://cgitwebapps.coralgables.com/CGDashboards/CityClerkElectionsDashboard.aspx"
+
+  utter_get_govqa_public_records_request:
+- text: "I found this link for you https://coralgablesfl.mycusthelp.com/WEBAPP/_rs/(S(xmyqeznqecgcoxavfby3qrz1))/RequestLogin.aspx?sSessionID=741141445UTPNEPIFKEGMRBWLUCGNOULTZOWNOPI&amp;rqst=106&amp;target=YpURA3m6cNU+N1K9kEqQhqz8yC2ZLKNdSdB4wnowVJ5S8CGTBp2GIItHg4/I0pUM8Jvp1AAd4YheCcTrA795fG9P3xL5LmB/wFQjiIoSWN49XTswE3ZhAz1J/5gOuiwgOjyZ2b9xwmZZWxpe5fVjSAZHl3JoqpZ0aER4qjBIUm8="
+
+  utter_get_public_records:
+- text: "I found this link for you https://portal.laserfiche.com/Portal/Welcome.aspx?repo=r-0e28d9ac"
+
+  utter_get_legislative_calendar_search:
+- text: "I found this link for you https://coralgables.legistar.com/Calendar.aspx"
+
+  utter_get_building_permits:
+- text: "I found this link for you https://cgitwebapps.coralgables.com/CGDashboards/DevServiceReports.aspx"
+
+  utter_get_citizen_request_center:
+- text: "I found this link for you https://coralgablesfl.mycusthelp.com/WEBAPP/_rs/(S(izpf2bytmaeauansevvquewz))/supporthome.aspx?sSessionID=741141445TRPCSJFQRCDJDWSFFYPQPLCNMRTIYDP&amp;lp=2"
+
+  utter_get_police_to_citizen:
+- text: "I found this link for you https://p2c.coralgables.com/"
+
+  utter_get_public_input:
+- text: "I found this link for you https://publicinput.com/hub/53"
+
+  utter_get_waze_connected_citizen_coral_gables_portal:
+- text: "I found this link for you https://arcg.is/COnHL"
+
+  utter_get_citizen_engagement_survey:
+- text: "I found this link for you https://www.coralgables.com/survey"
+
+  utter_get_enews:
+- text: "I found this link for you https://visitor.r20.constantcontact.com/manage/optin?v=0019-F1k886HmSdRYtKhrkj4ddPq3dn9ScXjCVJAJcMDCMoYvsoHMGfjiUjkrIIjkyujCdeNcLOgbLwqH9CzaHVSp90nuwXWLh-7RxklG2cUedNX9bpETc8lAfGCWePCIL5WLBUrqmQ49-qycoR3mhwtoH79yAo7KfcDz5LLVj4fqx-dbUxnNbcC1QPgJw6okuf"
+
+  utter_get_public_works:
+- text: "I found this link for you https://www.coralgables.com/departments/PublicWorks/www.coralgables.com/sustainablepublicinfrastructure"
+
+  utter_get_technology:
+- text: "I found this link for you https://www.coralgables.com/departments/InformationTechnology"
+
+  utter_get_coral_gables_virtual_tour:
+- text: "I found this link for you https://maps.fiu.edu/cgm/coralGablesTour2D.html"
+
+  utter_get_coral_gables_digital_collection:
+- text: "I found this link for you https://maps.fiu.edu/cgm/cgmCollections.htm"
+
+  utter_get_coral_gables_talking_book:
+- text: "I found this link for you https://coralgables.fiu.edu/talking_book/index.htm"
+
+  utter_get_fiu_gis_center:
+- text: "I found this link for you https://maps.fiu.edu/gis/"
+
+  utter_get_get_the_city_app:
+- text: "I found this link for you https://www.coralgables.com/departments/InformationTechnology/cityapp"
+
+  utter_get_traffix_link_to_apple_and_google_stores:
+- text: "I found this link for you https://www.coralgables.com/traffix"
+
+  utter_get_saferwatch:
+- text: "I found this link for you https://www.saferwatchapp.com/coralgables/"
+
+  utter_get_orchid_tracker:
+- text: "I found this link for you https://apps.apple.com/us/app/orchidtracker/id1348563301"
+
+  utter_get_magical_park_app:
+- text: "I found this link for you https://play.google.com/store/apps/details?id=com.GeoARGames.MagicalPark2&amp;hl=en_US"
+
+  utter_get_actionbound_app:
+- text: "I found this link for you https://en.actionbound.com/download/"
+
+  utter_get_invoice_business_licenses:
+- text: "I found this link for you https://edenweb.coralgables.com/Default.asp?Build=LI.LicensingHome&amp;ClearErrors=Y"
+
+  utter_get_permits:
+- text: "I found this link for you https://edenweb.coralgables.com/Default.asp?Build=PM.PermitsHome"
+
+  utter_get_property_leases:
+- text: "I found this link for you https://edenweb.coralgables.com/Default.asp?Build=AR.CustomerHome&amp;ClearErrors=Y"
+
+  utter_get_parks_and_recreation:
+- text: "I found this link for you https://web1.vermontsystems.com/wbwsc/flcoralgableswt.wsc/splash.html"
+
+  utter_get_careers_in_coral_gables:
+- text: "I found this link for you https://www.governmentjobs.com/careers/coralgablesfl"
+
+  utter_get_vendors_and_bids:
+- text: "I found this link for you https://www.publicpurchase.com/gems/register/vendor/register"
+
+  utter_get_parking_permit_renewal:
+- text: "I found this link for you https://cityofcoralgables.t2hosted.com/cmn/displayAnnouncement.aspx"
+
+  utter_get_lobbyist_registration_portal:
+- text: "I found this link for you https://lobbyist.coralgables.com/SignIn.aspx?ReturnUrl=%2F"
+
+  utter_get_city_employee_portal:
+- text: "I found this link for you https://www.coralgables.com/cityemployees"
+
+  utter_get_financial_transparency:
+- text: "I found this link for you https://www.coralgables.com/financial-transparency"
+
+  utter_get_city_trees:
+- text: "I found this link for you https://cggis.maps.arcgis.com/apps/View/index.html?appid=c8454559d85a4a0ab558df239818d6d9"
+
+  utter_get_open_business_data:
+- text: "I found this link for you https://www.coralgables.com/departments/economic/attractions-business-directory-search"
+
+  utter_get_parks:
+- text: "I found this link for you https://cg-hubdev-cggis.opendata.arcgis.com/search?groupIds=e48f4e0dbf9042ca84efc1cfa064cb58"
+
+  utter_get_boundaries:
+- text: "I found this link for you https://cg-hubdev-cggis.opendata.arcgis.com/search?groupIds=ee68a1346d554da8955d24a1d4101759"
+
+  utter_get_business:
+- text: "I found this link for you https://cg-hubdev-cggis.opendata.arcgis.com/search?groupIds=5b681aa3a4234254a9eb06a96256480f"
+
+  utter_get_health:
+- text: "I found this link for you https://cg-hubdev-cggis.opendata.arcgis.com/search?groupIds=9c8e6d3077fa4c6aa7dc923fac9d1b55"
+
+  utter_get_housing:
+- text: "I found this link for you https://cg-hubdev-cggis.opendata.arcgis.com/search?groupIds=5d27dc31f3504dcba1ff5b8c1a9e86af"
+
+  utter_get_giralda_avenue_promenade_smart_city_iot_sensors:
+- text: "I found this link for you https://data.eco-counter.com/ParcPublic/?id=6023"
+
+  utter_get_waterway_gauge_iot_sensors_blue_road_and_cocoplum:
+- text: "I found this link for you https://www.hydrovu.com/#/?token=BVVjA4D8ugmchwxyD%2B7xfu1%2B%2Byg9QTIs11rwLajAwZ9%2F5xkT0hgpgZEYt5rZvtDSP2E0iYxkue3E8pKE0jKzGeXR93A17jPx1KU817UQLCebLm%2F1ZfJRxxUPIkHtAeT%2F0jZ51BMQgDdN2l%2Boeuntxg%3D%3D"
+
+  utter_get_discover_open_iot:
+- text: "I found this link for you https://www.thingful.net/?lat=25.65305513927771&amp;lng=-80.28293609619139&amp;z=13"
+
+  utter_get_suite_of_zoning_and_code_enforcement_web_applications_and_maps_in_a_convenient_dashboard:
+- text: "I found this link for you https://www.arcgis.com/apps/opsdashboard/index.html#/03108cec7cbf4b3ba5d4bc6377203bbd"
+
+  utter_get_coral_gables_trolley_route:
+- text: "I found this link for you https://cg-hubdev-cggis.opendata.arcgis.com/app/cfa7886fe2564bd4a4353b342555b0de"
+
+  utter_get_sustainable_living_web_app_for_the_city_of_coral_gables:
+- text: "I found this link for you https://cg-hubdev-cggis.opendata.arcgis.com/app/af75b346e8d4485bb50c0139e4f63d59"
+
+  utter_get_locations_of_evehicle_charging_stations_in_and_around_coral_gables:
+- text: "I found this link for you https://cg-hubdev-cggis.opendata.arcgis.com/app/55d8a04248764a2cae53a2db7f44d549"
+
+  utter_get_properties_and_boundary_for_coral_gables_business_improvement_district:
+- text: "I found this link for you https://cg-hubdev-cggis.opendata.arcgis.com/app/9e64a7f41c044ec6b31a8dd069193da2"
+
+  utter_get_locations_for_city_of_coral_gables_pet_waste_stations:
+- text: "I found this link for you https://cg-hubdev-cggis.opendata.arcgis.com/app/5bb3461affd544c2bb4d01c13d4c26b5"
+
+  utter_get_this_scene_contains_several_3d_feature_class_of_buildings_and_monuments_throughout_the_city_of_coral_gables_in_florida:
+- text: "I found this link for you https://cg-hubdev-cggis.opendata.arcgis.com/app/9aad7e27b48d4540960b5d7daf9708b7"
+
+  utter_get_development_services:
+- text: "I found this link for you https://cggisw.coralgables.com/cgdevelopment/"
+
+  utter_get_hurricane_irma_debris:
+- text: "I found this link for you https://cggis.maps.arcgis.com/apps/webappviewer/index.html?id=96e05cd1954a4d6b9f8fec15d9690e0a"
+
+  utter_get_election_precincts:
+- text: "I found this link for you https://cggisw.coralgables.com/cgvoting/"
+
+  utter_get_city_street_lights:
+- text: "I found this link for you https://cggisw.coralgables.com/cglights/"
+
+  utter_get_bicycle_routes:
+- text: "I found this link for you https://cggisw.coralgables.com/cgbikepedestrian/"
+
+  utter_get_historical_resources:
+- text: "I found this link for you https://cggisw.coralgables.com/cghistoric/"
+
+  utter_get_city_services:
+- text: "I found this link for you https://cggisw.coralgables.com/cgoverlay/"
+
+  utter_get_election_demographics:
+- text: "I found this link for you https://cggisw.coralgables.com/cgdemographics/"
+
+  utter_get_trolley_routes_and_stops:
+- text: "I found this link for you https://cggisw.coralgables.com/cgtrolley/"
+
+  utter_get_explore_coral_gables:
+- text: "I found this link for you https://cggis.maps.arcgis.com/apps/opsdashboard/index.html#/28cb24c78b3d499f89afe6e889ce88cf"
+
+  utter_get_coral_gables_location:
+- text: "I found this link for you https://cggisw.coralgables.com/cglocation/"
+
+  utter_get_waze_map:
+- text: "I found this link for you https://cggis.maps.arcgis.com/apps/PublicInformation/index.html?appid=1a57adc503bc42158159e091b7dea8df"
+
+  utter_get_property_story_map:
+- text: "I found this link for you https://storymaps.arcgis.com/stories/610f079a458042448ccce9e7356d4570"
+
+  utter_get_broadband_availability:
+- text: "I found this link for you https://broadbandusa.maps.arcgis.com/apps/webappviewer/index.html?id=39dc6d41b49d420e94aef77c441f8af2"
+
+  utter_get_community_vision_quality_places_for_people:
+- text: "I found this link for you https://qp4p-cggis.hub.arcgis.com/"
+
+  utter_get_multimodal_transportation_citywide_traffic_calming:
+- text: "I found this link for you https://cocg-multimodal-transportation-cggis.hub.arcgis.com/"
+
+  utter_get_flagler_section:
+- text: "I found this link for you https://flagler-section-community-vision-workshop-1-cggis.hub.arcgis.com/"
+
+  utter_get_city_covid_19_response_application:
+- text: "I found this link for you https://covid-19-testing-application-cggis.hub.arcgis.com/"
+
+  utter_get_master_planning_in_coral_gables:
+- text: "I found this link for you https://coral-gables-planning-cggis.hub.arcgis.com/"
+
+  utter_get_smart_city_comp:
+- text: "I found this link for you https://smart-city-competition-cggis.hub.arcgis.com/"
+
+  utter_get_design_your_coral_gables_smart_city_solutions_contest_2019:
+- text: "I found this link for you https://smartcities.miami.edu/competition/"
+
+  utter_get_giralda_plaza_in_a_smart_city:
+- text: "I found this link for you https://smart-city-competition-cggis.hub.arcgis.com/"
+
+  utter_get_attractions_pictures:
+- text: "I found this link for you https://cggisw.coralgables.com/cgemerge/"
