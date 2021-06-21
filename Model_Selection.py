@@ -16,8 +16,6 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import LinearSVC
 from sklearn.model_selection import cross_val_score
 
-
-
 def load_csv_file():
     input_file = "./dataset_clean.csv"
     df = pd.read_csv(input_file, header = 0)
@@ -27,8 +25,6 @@ def load_csv_file():
     #numpy_array = df.head(10).as_matrix()
     #print(numpy_array)
     #data =  np.loadtxt(input_file = f, delimiter = ',')
-
-
 df = load_csv_file()
 
 #Prepate Data Set to ML Pipeline
@@ -65,8 +61,6 @@ for Website, category_id in sorted(category_to_id.items()):
   #print("  . Most correlated unigrams:\n. {}".format('\n. '.join(unigrams[-N:])))
   #print("  . Most correlated bigrams:\n. {}".format('\n. '.join(bigrams[-N:])))
 
-
-``
 X_train, X_test, y_train, y_test = train_test_split(df['Description'], df['Website'], random_state = 0)
 count_vect = CountVectorizer()
 X_train_counts = count_vect.fit_transform(X_train)

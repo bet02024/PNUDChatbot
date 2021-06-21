@@ -96,6 +96,10 @@ responses:
   utter_greet:
   - text: "Hey! How are you?"
 
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
   utter_did_that_help:
   - text: "Did that help you?"
 
@@ -425,7 +429,6 @@ actions:
 - utter_get_design_your_coral_gables_smart_city_solutions_contest_2019
 - utter_get_giralda_plaza_in_a_smart_city
 - utter_get_attractions_pictures
-
 
 session_config:
   session_expiration_time: 60
