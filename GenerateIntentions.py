@@ -13,48 +13,6 @@ from nltk.corpus import stopwords
 stop_words = stopwords.words('english')
 import yaml
 
-
-# Adds custom stopword into spaCy default stopword list
-nlp.Defaults.stop_words |= {"o", "arcgis", "browser", "support", "date", "sort", "count", "vpn", "archive", "twitter", "coral", "gable", "coralgablea", "instagram", "linkedin", "tv", "large", "small", "non", "map", "key", "invalid", "response", "error"}
-
-
-print(nlp.Defaults)
-
-# Calculates the frequency of words in a document
-def remove_stopwords(sentence):
-    words = nlp(sentence)
-    processed_sentence = ' '.join([token.text for token in words if token.is_stop != True ])
-    words = word_tokenize(processed_sentence)
-    words = [w for w in words if not w in stop_words]
-    processed_sentence = ' '.join(words)
-    return processed_sentence
-
-def remove_punctuation_special_chars(sentence):
-    sentence = nlp(sentence)
-    processed_sentence = ' '.join([token.text for token in sentence
-    if token.is_punct != True and
-        token.is_quote != True and
-        token.is_bracket != True and
-        token.is_currency != True and
-        token.is_digit != True])
-    return processed_sentence# Lemmatization process with spaCy
-
-def lemmatize_text(sentence):
-    sentence = nlp(sentence)
-    processed_sentence = ' '.join([word.lemma_ for word in sentence])
-    return processed_sentence
-
-def remove_numbers(text):
-    tokens = word_tokenize(text)
-    words = [word for word in tokens if word.isalpha()]
-    return ' '.join(words)
-
-def remove_special_chars(text):
-    bad_chars = ["%", "#", '"', "*"]
-    for i in bad_chars:
-        text = text.replace(i, '')
-    return text
-
 def generate_intentions_file(file_name, file_name_yml, file_name_out):
     dict_file = []
     fieldnames = ['Website', 'Description', 'ScrapedText', 'Keywords', 'UserIntentions']

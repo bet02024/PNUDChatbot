@@ -100,10 +100,10 @@ def clearScrapedText(file_name, file_name_out):
                 text = remove_numbers(text)
                 doc = nlp(text)
                 #print(text)
-                print("######")
                 #print(doc)
                 text = remove_stopwords(text)
-                text = lemmatize_text(text)
+                #text = lemmatize_text(text)
+                print("######", url, " --- ", description)
                 word_frequency(text)
                 writer.writerow({'Website': url, 'Description': description, 'ScrapedText': scrapedtext, 'Keywords':text, 'UserIntentions':userintentions})
 
