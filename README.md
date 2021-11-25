@@ -1,62 +1,30 @@
-# Coral Gables Chatbot Project!
+# ONU PNUD Chatbot Project!
 
 Scope
 
-Explore the feasibility to create a Chatbot using the html text in the links of
- **The Coral Gables Smart Hub Portal**
-https://cg-hubdev-cggis.opendata.arcgis.com/
-
-Steeps
-
-# 1) Create a Dataset manually of all the resources in the The Coral Gables Smart Hub Portal
+Explore the feasibility to create a Chatbot to help womens against domestic violence
 
 
-https://docs.google.com/spreadsheets/d/1Xjrs7jnW5wtXnRtB8XQx51w7KMhq0Xlj4f5jDeutNRY/edit#gid=0
+# 1) Create a Dataset manually of all the user intentions, using existing conversations 
 
-# 2) Create a HTML Scrapper in Python using selenium chromedriver
-
-
-Pre-requsitites
-    #Install chromedriver
-
-    #Run ScrapBot.py
-    $python3 ScrapBot.py
+https://docs.google.com/spreadsheets/d/1Xjrs7jnW5wtXnRtB8XQx51w7KMhq0Xlj4f5jDeutNRX
 
 
-input   "./dataset.csv"
-output = "./dataset_out.csv"
+# 2).  Data exploration & test with different Models
 
-# 3).  Clean the html text
-
-
-    #Run CleanDataset.py
-    $python3 CleanDataset.py
-
-input   "./dataset_out.csv"
-output = "./dataset_clean.csv"
+   #Run Model_Selection.py
+ 
+ $python3 Model_Selection.py
 
 
-# 4).  Data exploration & test with different Models
-
-    #Run Model_Selection.py
-    $python3 Model_Selection.py
-'
+# 3).  Clean the dataset 
 
 input   "./dataset_clean.csv"
 output1 = "./dataset_by_keywords.csv"
 output2 = "./dataset_clean.csv". (updated)
 
 
-
-# 5).  Clean the dataset manually
-
-(TODO)
-Explore the dataset to clean duplicated user intentions
-Explore the url resources to delete similar content
-Use data augmentation to generate more data on the intentions with less keywords.
-
-
-# 6).  Test the Chatbot UI
+# 4).  Test the Chatbot UI using RASA SDK
 
 Pre-requsitites
     #Install RASA
