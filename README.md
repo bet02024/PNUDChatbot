@@ -4,6 +4,9 @@ Scope
 
 Explore the feasibility to create a Chatbot to help womens against domestic violence
 
+![image](https://user-images.githubusercontent.com/239682/143329590-e4882dff-9bc5-4e87-9658-774014dd8897.png)
+
+
 
 # 1) Create a Dataset manually of all the user intentions, using existing conversations 
 
