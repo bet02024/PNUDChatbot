@@ -1,60 +1,880 @@
 version: "2.0"
 
 intents:
-  - greet
-  - goodbye
-  - out_of_scope 
-  - get_phone_numbers
-  - get_directory_of_office_locations
-  - get_psychological_assistance
-  - get_legal_assistance
-  - get_general_assistance
-
+  - saludo
+  - despedida
+  - afirmar
+  - negar
+  - reto_bot
+  - aprender
+  - contactos
+  - pareja
+  - domestico
+  - laboral
+  - escolar
+  - espacio_pub
+  - digital_medios
+  - politica
+  - int_menu_principal
+  - no_input
+  - actuar_violencia
+  - agente_social
+  - aprender_pareja_finalizar
+  - aprender_domestico_finalizar
+  - aprender_laboral_finalizar
+  - aprender_escolar_finalizar
+  - aprender_politica_finalizar
+  - aprender_espacio_pub_finalizar
+  - finalizar_aprender_info
+  - finalizar_aprender_si
+  - finalizar_aprender_no
+  - actuar_pareja
+  - actuar_domestico
+  - actuar_laboral
+  - actuar_escolar
+  - actuar_espacio_pub
+  - actuar_digital_medios
+  - actuar_politica
+  - actuar_pareja_si
+  - actuar_domestico_si
+  - actuar_laboral_si
+  - actuar_escolar_si
+  - actuar_espacio_pub_si
+  - actuar_digital_medios_si
+  - actuar_politica_si
+  - actuar_pareja_no
+  - actuar_domestico_no
+  - actuar_laboral_no
+  - actuar_escolar_no
+  - actuar_espacio_pub_no
+  - actuar_digital_medios_no
+  - actuar_politica_no
+  - finalizar_actuar
+  - finalizar_actuar_si
+  - finalizar_actuar_no
+  - agente_social_si
+  - agente_social_no
+  - agente_social_general
+  - agente_social_politica
+  - agente_social_medios
+  - agente_social_espacio_pub
+  - agente_social_escolar
+  - agente_social_laboral
+  - agente_social_domestico
+  - agente_social_pareja
+  - agente_social_contextos
 
 responses:
+  utter_saludo_principal:
+  - text: "¡Hola! Soy Luna, una amiga de la Secretaría de las Mujeres."
+  utter_objetivo_principal:
+  - text: "Puedo compartirte información sobre lo que es la violencia de género para identificarla y saber qué hacer en esos casos de violencia."
+  utter_menu_principal:
+  - text: "¿En qué puedo ayudarte?"
+    buttons:
+    - title: "Quiero saber qué es la violencia de género."
+      payload: "/aprender"
+    - title: "Quiero ayudar a alguien en una situación actual de violencia."
+      payload: "/actuar_violencia"
+    - title : "Quiero saber cómo puedo ayudar a mi comunidad a erradicar la violencia de género."
+      payload: "/agente_social"
+    - title : "Contactos útiles"
+      payload: "/contactos"
 
-  utter_please_rephrase:
-  - text: Disculpa podrias repetir lo que buscas?
+  utter_objetivo_aprender:
+  - text: "La violencia de género se da por acciones de personas o instituciones que producen sufrimiento a las mujers de forma física, mental, económica, sexual o de otras maneras.\n  Estas acciones violentas ocurren en diferentes espacios."
 
-  utter_out_of_scope:
-  - text: Sorry, they are some information related with Coral Gables City Hub, that you need?
+  utter_menu_aprender:
+  - text: "¿Sobre cuál quieres aprender?"
+    buttons:
+    - title: "En una relación de pareja."
+      payload: "/pareja"
+    - title: "Doméstico"
+      payload: "/domestico"
+    - title: "Laboral"
+      payload: "/laboral"
+    - title: "Escolar"
+      payload: "/escolar"
+    - title: "Espacio público"
+      payload: "/espacio_pub"
+    - title: "Digital y medios"
+      payload: "/digital_medios"
+    - title: "Política"
+      payload: "/politica"
+    - title: "Regresar a menú principal"
+      payload: "/saludo"
 
-  utter_greet:
-  - text: "Hey! How are you?"
+  utter_objetivo_aprender_pareja:
+  - text: "La persona que es violenta en el noviazgo tiene el propósito de controlar el cuerpo, la mente y la sexualidad de la pareja. Puede iniciar con comentarios incómodos o pequeños jaloneos que se confunden con juegos, pero con el tiempo la persona violenta hace más grave sus agresiones.\n\n¿Identificas un caso de violencia con esta información?"
+    buttons:
+    - title: "Si"
+      payload: "/actuar_violencia"
+    - title: "No"
+      payload: "/aprender_pareja_finalizar"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_objetivo_aprender_domestico:
+  - text: "Hay miembros del hogar que pueden ser violentos. Pueden ser familiares de sangre, políticos, cuidadores, la pareja de algún familiar, o cualquier otra persona con la que se comparte el hogar. Estas personas usan su autoridad dentro del hogar para intentar controlar y agredir.\n¿Identificas un caso de violencia con esta información?"
+    buttons:
+    - title: "Si"
+      payload: "/actuar_violencia"
+    - title: "No"
+      payload: "/aprender_domestico_finalizar"
 
-  utter_did_that_help:
-  - text: "Did that help you?" 
-  
-  utter_goodbye:
-  - text: "You are welcome, see you soon"
- 
-  utter_ask_what_do_you_need:
-  - text: Hello, welcome to The Coral Gables Hub. I'm AIDA, I am here to help you navigate this portal, How can I help you today?
-  - text: Hi, welcome to The Coral Gables Hub, I am here to help you find the right service on this portal, what are you looking for?
-  - text: Good morning, welcome to The Coral Gables Hub, this is AIDA, I am here to help you navigate this portal, what are you looking for?
+  utter_objetivo_aprender_laboral:
+  - text: "En el trabajo puede haber dos momentos en los que se presentan actos de violencia: uno es mientras te están contratando y el otro es al estar trabajando. En el primero hay actos como negar la contratación por discriminación. En el segundo se realizan descalificaciones, humillaciones y explotación por el trabajo hecho\n ¿Identificas un caso de violencia con esta información?"
+    buttons:
+    - title: "Si"
+      payload: "/actuar_violencia"
+    - title: "No"
+      payload: "/aprender_laboral_finalizar"
 
-actions:
-  - greet
-  - goodbye
-  - out_of_scope 
-  - get_phone_numbers
-  - get_directory_of_office_locations
-  - get_psychological_assistance
-  - get_legal_assistance
-  - get_general_assistance
-  
-- utter_goodbye
-- utter_ask_what_do_you_need
-- utter_get_financial_revenues
-- utter_get_financial_expenditures
-- utter_get_property_tax_distribution
-- utter_get_passports_applications_dashboard
-- utter_get_city_lobbyists
-- utter_get_city_elections 
+  utter_objetivo_aprender_escolar:
+  - text: "El acoso escolar y el abuso físico y verbal pueden ocurrir en las escuelas de cualquier nivel. Pueden ser actos hechos por personas que trabajan en la escuela o por compañeros de clase. \n¿Identificas un caso de violencia con esta información?"
+    buttons:
+    - title: "Si"
+      payload: "/actuar_violencia"
+    - title: "No"
+      payload: "/aprender_escolar_finalizar"
+
+  utter_objetivo_aprender_espacio_pub:
+  - text: "Los agresores en la calle, plaza o parques públicos pueden estar solos o en grupo. Pueden hacer comentarios humillantes, actos violentos o irrumpir en la dignidad de las mujeres en espacio públicos \n¿Identificas un caso de violencia con esta información?"
+    buttons:
+    - title: "Si"
+      payload: "/actuar_violencia"
+    - title: "No"
+      payload: "/aprender_espacio_pub_finalizar"
+
+  utter_objetivo_aprender_politica:
+  - text: "Si un servidor público impide un trámite o goce de algún derecho humano hay acciones de violencia.\n¿Identificas un caso de violencia con esta información?"
+    buttons:
+    - title: "Si"
+      payload: "/actuar_violencia"
+    - title: "No"
+      payload: "/aprender_politica_finalizar"
+
+  utter_objetivo_aprender_pareja_finalizar:
+  - text: "Consejos Generales:\n\n"
+  - image: "https://pnud.s3.us-east-2.amazonaws.com/Pareja.jpg"
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "Consejos para actuar sobre un caso particular"
+      payload: "/actuar_violencia"
+    - title: "¿Cómo ser una agente social?"
+      payload: "/agente_social"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_aprender_info"
+
+  utter_objetivo_aprender_domestico_finalizar:
+  - text: "Consejos Generales:\n\n"
+  - image: "https://pnud.s3.us-east-2.amazonaws.com/Casa.jpg"
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "Consejos para actuar sobre un caso particular"
+      payload: "/actuar_violencia"
+    - title: "¿Cómo ser una agente social?"
+      payload: "/agente_social"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_aprender_info"
+
+  utter_objetivo_aprender_laboral_finalizar:
+  - text: "Consejos Generales:\n\n"
+  - image: "https://pnud.s3.us-east-2.amazonaws.com/Trabajo.jpg"
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "Consejos para actuar sobre un caso particular"
+      payload: "/actuar_violencia"
+    - title: "¿Cómo ser una agente social?"
+      payload: "/agente_social"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_aprender_info"
+
+  utter_objetivo_aprender_escolar_finalizar:
+  - text: "Consejos Generales:\n\n"
+  - image: "https://pnud.s3.us-east-2.amazonaws.com/Escuela.jpg"
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "Consejos para actuar sobre un caso particular"
+      payload: "/actuar_violencia"
+    - title: "¿Cómo ser una agente social?"
+      payload: "/agente_social"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_aprender_info"
+
+  utter_objetivo_aprender_politica_finalizar:
+  - text: "Consejos Generales:\n\n"
+  - image: "https://pnud.s3.us-east-2.amazonaws.com/Instituciones.jpg"
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "Consejos para actuar sobre un caso particular"
+      payload: "/actuar_violencia"
+    - title: "¿Cómo ser una agente social?"
+      payload: "/agente_social"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_aprender_info"
+
+  utter_objetivo_aprender_espacio_pub_finalizar:
+  - text: "Consejos Generales:\n\n"
+  - image: "https://pnud.s3.us-east-2.amazonaws.com/Publico.jpg"
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "Consejos para actuar sobre un caso particular"
+      payload: "/actuar_violencia"
+    - title: "¿Cómo ser una agente social?"
+      payload: "/agente_social"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_aprender_info"
+
+
+  utter_objetivo_aprender_digital_medios:
+  - text: "¿Cómo ocurre generalmente la VG en ambiente de medios de comunicación?\n. .....\n\nA qué debemos prestar atención:\n ....¿Identificas un caso de violencia con esta información?"
+  - image: "https://pnud.s3.us-east-2.amazonaws.com/Medios.jpg"
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "Consejos para actuar sobre un caso particular"
+      payload: "/actuar_violencia"
+    - title: "¿Cómo ser una agente social?"
+      payload: "/agente_social"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_aprender_info"
+
+
+  utter_finalizar_aprender_info:
+  - text: "Muchas gracias!\n Descarga tarjeta de contactos útiles.\n\n Contactos  utiles\n\n¿La información te fué útil?"
+  - image: "https://pnud.s3.us-east-2.amazonaws.com/Contactos.jpg"
+    buttons:
+    - title: "SI"
+      payload: "/finalizar_aprender_si"
+    - title: "NO"
+      payload: "/finalizar_aprender_no"
+
+  utter_finalizar_actuar:
+  - text: "¿La información te fué útil?"
+  - image: "https://pnud.s3.us-east-2.amazonaws.com/Actua.jpg"
+    buttons:
+    - title: "SI"
+      payload: "/finalizar_actuar_si"
+    - title: "NO"
+      payload: "/finalizar_actuar_no"
+
+  utter_finalizar_actuar_no:
+  - text: "Muchas gracias! \n Puedes contactarnos en @pnud.org para poderte orientar mejor"
+
+  utter_finalizar_actuar_si:
+  - text: "Muchas gracias! \n ."
+
+  utter_finalizar_aprender_no:
+  - text: "Muchas gracias! \n Puedes contactarnos en @pnud.org para poderte orientar mejor"
+
+  utter_finalizar_aprender_si:
+  - text: "Muchas gracias! \n ."
+
+  utter_motivacion_actuar:
+  - text: "Muchas gracias! Hero! \n Aquí un recordatorio."
+
+  utter_pedir_input:
+  - text: "Por favor, introduce de nuevo lo que deseas buscar"
+  utter_decir_despedida:
+  - text: "Bye"
+  utter_decir_soybot:
+  - text: "I am a bot, powered by Rasa."
+
+
+  utter_agente_social:
+  - text: |
+      La violencia de género puede desaprenderse con la ayuda de personas de cualquier edad y género.
+
+      Eres importante para incidir en las/os demás.
+
+      ¿Crees que con lo que sabes sobre la violencia de género puedes ayudar a tu comunidad?
+  - image: "https://pnud.s3.us-east-2.amazonaws.com/Comunidad.jpg"
+    buttons:
+    - title: "Sí"
+      payload: "/agente_social_si"
+    - title: "No"
+      payload: "/agente_social_no"
+
+
+  utter_agente_social_si:
+  - text: |
+      Como sabrás, es importante acabar con la violencia de género para lograr una vida libre y segura, ya sea en calle o en la casa.
+      Todo lo que sabes puede contribuir a hacer comunidades libres de violencia para todas y todos.
+
+      ¿A qué tipo de acción te quisieras sumar?
+    buttons:
+    - title: "En un contexto específico que identificas un riesgo de violencia"
+      payload: "/agente_social_contextos"
+    - title: "Eliminar la violencia de genero en general"
+      payload: "/agente_social_general"
+
+  utter_agente_social_no:
+  - text: |
+      No te preocupes, a veces es difícil identificar las señales de violencia y, por lo mismo, resulta complicado tener una idea clara de cómo ayudar a las víctimas.
+
+      ¿A qué tipo de acción te quisieras sumar?
+    buttons:
+    - title: "En un contexto específico que identificas un riesgo de violencia"
+      payload: "/agente_social_contextos"
+    - title: "Eliminar la violencia de genero en general"
+      payload: "/agente_social_general"
+
+
+  utter_agente_social_general:
+  - text: |
+      De manera general, puedes demostrar que está en contra de la violencia de género, de la cultura de violación y de que la violencia puede desaprenderse.
+
+      Inicia la conversación con gente conocida, amistades y familiares, para mostrar cómo todas las personas tenemos responsabilidad en el tema al cometer agresiones o ser testigos pasivos de estos eventos.
+
+      Puedes aprender uniéndote a organizaciones de mujeres que enseñan sobre una vida libre de violencia o con programas y acciones en contra de la violencia de género.
+
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "Consejos para actuar sobre un caso particular"
+      payload: "/actuar_violencia"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_aprender_info"
+    - title: "Escoger un contexto específico que identificas un riesgo de violencia"
+      payload: "/agente_social_contextos"
+
+  utter_agente_social_contextos:
+  - text: |
+      ¿En cuál de los siguientes contextos te gustaría actuar?
+    buttons:
+    - title: "En relación de pareja"
+      payload: "/agente_social_pareja"
+    - title: "En la casa."
+      payload: "/agente_social_domestico"
+    - title: "En el trabajo."
+      payload: "/agente_social_laboral"
+    - title: "En la escuela."
+      payload: "/agente_social_escolar"
+    - title: "En lugares públicos."
+      payload: "/agente_social_espacio_pub"
+    - title: "En internet y redes sociales."
+      payload: "/agente_social_digital_medios"
+    - title: "En el medio político e instituciones"
+      payload: "/agente_social_politica"
+
+
+  utter_agente_social_pareja:
+  - text: |
+      Para eliminar la violencia de género en la pareja se pueden aprender a identificar la violencia.
+
+      Por ejemplo, puedes explicar que el consentimiento es cuando ambas partes de una relación están de acuerdo y se comprometen a realizar determinadas acciones y que, por el contrario, cuando se rompe este acuerdo ya se está iniciando la violencia.
+
+      También le puedes decir a más mujeres que la violencia en la pareja escala, es decir, se vuelve cada vez más grave y letal con el paso del tiempo.
+
+      Puede iniciar con bromas hirientes, con la "ley del hielo" y va haciéndose más peligrosa hasta llegar a la violación y el feminicidio.
+
+      Descarga el Violentómetro y compártelo con más mujeres y hombres.
+
+      ¿Donde te interesaría continuar?
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "Consejos para actuar sobre un caso particular"
+      payload: "/actuar_violencia"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_aprender_info"
+
+
+  utter_agente_social_domestico:
+  - text: |
+      Estar dentro de un hogar permite enseñar a diferentes generaciones sobre los problemas que genera la violencia de género y sobre lo bueno que es vivir libre de agresiones.
+
+      Puedes hablar con niñas y niños para explicarles que todas las personas somos iguales y que nadie puede tocar el cuerpo de alguien más sin permiso.
+
+      A las personas más grandes puedes decirles que la violencia no es normal ni está bien. Que no tienen por qué comentar sobre el cuerpo de sus hijas, hermanas, tías, madres o cualquier mujer.
+
+      ¿Donde te interesaría continuar?
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "Consejos para actuar sobre un caso particular"
+      payload: "/actuar_violencia"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_aprender_info"
+
+
+  utter_agente_social_laboral:
+  - text: |
+      Si hay agresiones en tu lugar de trabajo puedes denunciarlos con una autoridad de confianza, siempre protegiendo la identidad de las víctimas.
+
+      Si no existe un protocolo para prevenir el hostigamiento y el acoso sexual en la oficina puedes proponer que se cree uno. Si ya existe, puedes pedirle a las autoridades que hagan difusión sobre el protocolo y que se enseñe a todas las personas del lugar.
+
+      Respetando el espacio y la privacidad de las víctimas, acércate a ellas y ayúdalas como ellas prefieran que lo hagas.
+
+      ¿Donde te interesaría continuar?
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "Consejos para actuar sobre un caso particular"
+      payload: "/actuar_violencia"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_aprender_info"
+
+
+  utter_agente_social_escolar:
+  - text: |
+      Pregunta en tu escuela si hay un protocolo de atención a la violencia de género para evitar y atender los casos de acoso.
+
+      Si hay autoridades involucradas en casos de violencia, denúncialos con otros autoridades de confianza, siempre y cuando te sientas segura de poder hacerlo.
+
+      Lo mismo para denunciar a compañeros de clase que hayan realizado agresiones a mujeres de tu escuela.
+
+      Si hay víctimas, acompáñalas y pueden formar una red de apoyo de mujeres para informarse sobre cómo ocurre la violencia de género en la escuela y en otros lugares.
+
+      Pueden tener a la mano la información de algunas acciones contra la violencia de género hacia niñas, adolescentes y mujeres en: https://www.semujeres.cdmx.gob.mx/programas
+
+      ¿Donde te interesaría continuar?
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "Consejos para actuar sobre un caso particular"
+      payload: "/actuar_violencia"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_aprender_info"
+
+
+  utter_agente_social_espacio_pub:
+  - text: |
+      Si ves que está ocurriendo una agresión en un lugar público, no actúes primero.
+
+      Tienes que asegurarte de que no te estés en riesgo de volverte una víctima por querer ayudar a alguien más.
+
+      A veces, lo mejor es observar, tomar nota de lo ocurrido y denunciar la violencia al teléfono de emergencia 911, a Línea Mujeres (55 5658 1111) o con algún policía que esté a la vista.
+
+      Puedes decirle a tus conocidas que ubiquen la Luna (https://www.semujeres.cdmx.gob.mx/lunas) más cercana y pedir ayuda psicológica y legal.
+
+      ¿Donde te interesaría continuar?
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "Consejos para actuar sobre un caso particular"
+      payload: "/actuar_violencia"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_aprender_info"
+
+
+  utter_agente_social_medios:
+  - text: |
+      Puedes unirte a grupos, blogs y cuentas en redes sociales que hablen sobre cómo eliminar la violencia de género.
+      Así podrás aprender lo que hacen más mujeres para vivir libremente y acompañar a otras personas cerca de ti, en otros estados y en otros países.
+
+      Si te sientes cómoda, puedes hablar sobre la violencia de género con tus conocidos en páginas de internet y compartir recursos para enseñarles a identificarla y así desaprenderla.
+
+      Invita a tus conocidos y seres queridos a no compartir fotografías y videos íntimos de cualquier mujer.
+      Puedes decirles que tomar fotografías o videos de mujeres desconocidas también es violento, así como entrar a grupos de Whatsapp o Telegram que divulgan material privado de niñas, adolescentes y mujeres.
+
+      ¿Donde te interesaría continuar?
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "Consejos para actuar sobre un caso particular"
+      payload: "/actuar_violencia"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_aprender_info"
+
+  utter_agente_social_politica:
+  - text: |
+      Puedes consultar los programas de la Secretaría de las Mujeres (https://www.semujeres.cdmx.gob.mx/programas) para saber las acciones y estrategias que existen para atender casos de violencia de género.
+
+      También puedes comunicarte a Línea Mujeres (55 5658 1111) para consultar los tipos de ayuda institucional que puedes encontrar, como el teléfono de las fiscalías especializadas para la denuncia y atención de diferentes tipos de violencia de género.
+
+      También puedes acercarte a la Luna (https://www.semujeres.cdmx.gob.mx/lunas) más cercana y sumarte a las actividades que tienen sobre la prevención y atención de la violencia.
+
+      ¿Donde te interesaría continuar?
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "Consejos para actuar sobre un caso particular"
+      payload: "/actuar_violencia"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_aprender_info"
+
+
+  utter_contactos:
+  - text: |
+      Esta información es para todas y todos.
+
+      Guárdala y compártela para que más personas sepan cómo identificar y erradicar situaciones de violencia.
+
+      ¡Es muy útil tener a la mano algunos contactos de ayuda!
+
+      Debes saber que hay muchas formas de recibir apoyo en situaciones de violencia.
+
+      ¿Donde te interesaría continuar?
+  - image: "https://pnud.s3.us-east-2.amazonaws.com/Contactos.jpg"
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "Consejos para actuar sobre un caso particular"
+      payload: "/actuar_violencia"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_aprender_info"
+
+
+  utter_menu_actuar:
+  - text: |
+      Gracias por querer acompañar a otras mujeres que viven situaciones de violencia.
+      Juntas podemos vivir libres y seguras.
+      ¿En cuál de los siguientes contextos están ocurriendo las agresiones?
+    buttons:
+    - title: "En una relación de pareja"
+      payload: "/actuar_pareja"
+    - title: "En la casa."
+      payload: "/actuar_domestico"
+    - title: "En el trabajo."
+      payload: "/actuar_laboral"
+    - title: "En la escuela."
+      payload: "/actuar_escolar"
+    - title: "En lugares públicos."
+      payload: "/actuar_espacio_pub"
+    - title: "En internet y redes sociales."
+      payload: "/actuar_digital_medios"
+    - title: "En el medio político e instituciones"
+      payload: "/actuar_politica"
+    - title: "Regresar a menú principal"
+      payload: "/int_menu_principal"
+
+
+  utter_actuar_pareja:
+  - text: "¿Conoces a la víctima?"
+    buttons:
+    - title: "SI"
+      payload: "/actuar_pareja_si"
+    - title: "NO"
+      payload: "/actuar_pareja_no"
+
+  utter_actuar_domestico:
+  - text: "¿Conoces a la víctima?"
+    buttons:
+    - title: "SI"
+      payload: "/actuar_domestico_si"
+    - title: "NO"
+      payload: "/actuar_domestico_no"
+
+  utter_actuar_laboral:
+  - text: "¿Conoces a la víctima?"
+    buttons:
+    - title: "SI"
+      payload: "/actuar_laboral_si"
+    - title: "NO"
+      payload: "/actuar_laboral_no"
+
+  utter_actuar_escolar:
+  - text: "¿Conoces a la víctima?"
+    buttons:
+    - title: "SI"
+      payload: "/actuar_escolar_si"
+    - title: "NO"
+      payload: "/actuar_escolar_no"
+
+  utter_actuar_espacio_pub:
+  - text: "¿Conoces a la víctima?"
+    buttons:
+    - title: "SI"
+      payload: "/actuar_espacio_pub_si"
+    - title: "NO"
+      payload: "/actuar_espacio_pub_no"
+
+  utter_actuar_digital_medios:
+  - text: "¿Conoces a la víctima?"
+    buttons:
+    - title: "SI"
+      payload: "/actuar_digital_medios_si"
+    - title: "NO"
+      payload: "/actuar_digital_medios_no"
+
+  utter_actuar_politica:
+  - text: "¿Conoces a la víctima?"
+    buttons:
+    - title: "SI"
+      payload: "/actuar_politica_si"
+    - title: "NO"
+      payload: "/actuar_politica_no"
+
+  utter_actuar_pareja_si:
+  - text: |
+      Lo más importante es crear un ambiente de confianza y escuchar atenta y cuidadosamente a la persona.
+      Si la víctima desea hablar, préstale atención mientras cuenta los detalles que ella quiera narrar.
+      Pudieron presentarse eventos muy delicados que no te platicará de inmediato así que todo escucha.
+      No la interrumpas y, si has vivido algo similar, no cuentes tu historia.
+      Este es un momento de ella.
+      Vayan un paso a la vez, sin saturar de información ni preguntas porque eso puede hacer que la persona se sienta más tensa, con miedo, insegura y confundida.
+      Ella necesita expresar sus sentimientos y así aclarar sus ideas.
+      Cuando esté tranquila, puedes acercarte a ella para ofrecerle el teléfono de Línea Mujeres (55 5658 1111) y comentarle que hay psicólogas y abogadas que pueden orientarla de manera anónima.
+
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "¿Cómo ser una agente social?"
+      payload: "/agente_social"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_actuar"
+
+  utter_actuar_pareja_no:
+  - text: |
+      Quizá no haya confianza para acercarte, sin embargo aun así puedes crear un ambiente de seguridad.
+
+      Lo más importante es que si la persona desea hablar, deberás escucharla atentamente.
+      No la interrumpas para hacerle preguntas o para minimizar lo que te está contando.
+      Por ningún motivo la juzgues o la hagas sentir que lo que vivió es insignificante.
+
+      Cuando esté tranquila, puedes acercarte a ella para ofrecerle el teléfono de Línea Mujeres (55 5658 1111) y comentarle que hay psicólogas y abogadas que pueden orientarla de manera anónima.
+
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "¿Cómo ser una agente social?"
+      payload: "/agente_social"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_actuar"
+
+
+  utter_actuar_domestico_si:
+  - text: |
+      Lo más importante es crear un ambiente de confianza y escuchar atenta y cuidadosamente a la persona.
+
+      Si la víctima desea hablar, préstale atención mientras cuenta los detalles que ella quiera narrar.
+      Hazle sentir que crees lo que te está contando y que estás de su lado para apoyarla de la manera que ella decida.
+
+      Pudieron presentarse eventos muy delicados con personas importantes en el hogar así que ten paciencia mientras te cuenta lo que ha vivido.
+      No la interrumpas, este es un momento de ella.
+
+      Cuando sea un momento pertinente, después de que esté más tranquila y haya contado su historia,
+      puedes darle el teléfono de Línea Mujeres (55 5658 1111) y decirle que hay psicólogas y abogadas que podrán escucharla de manera anónima.
+
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "¿Cómo ser una agente social?"
+      payload: "/agente_social"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_actuar"
+
+  utter_actuar_domestico_no:
+  - text: |
+      Quizá no haya confianza para acercarte, sin embargo aun así puedes crear un ambiente de seguridad.
+
+      Lo más importante es que si la persona desea hablar, deberás escucharla atentamente.
+      No la interrumpas para hacerle preguntas o para minimizar lo que te está contando.
+      Por ningún motivo la juzgues o la hagas sentir que lo que vivió es insignificante.
+
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "¿Cómo ser una agente social?"
+      payload: "/agente_social"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_actuar"
+
+  utter_actuar_laboral_si:
+  - text: |
+      Lo más importante es crear un ambiente de confianza y escuchar atenta y cuidadosamente a la persona.
+
+      Si la víctima desea hablar, préstale atención mientras cuenta los detalles que ella quiera narrar.
+      Hazle sentir que le crees y que estás de su lado para apoyarla de la manera que ella decida.
+
+      Pudieron presentarse eventos muy delicados con personas de autoridad en el lugar de trabajo así que entiende que la persona puede sentir miedo al hablar sobre lo que ha ocurrido.
+      Hazle preguntas específicas sobre lo que sucedió y ten paciencia si se toma más tiempo para pensar y responder.
+
+      Cuando sea un momento pertinente, después de que esté más tranquila y haya contado su historia, puedes darle el teléfono de Línea Mujeres (55 5658 1111) y decirle que hay psicólogas y abogadas que podrán escucharla de manera anónima.
+
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "¿Cómo ser una agente social?"
+      payload: "/agente_social"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_actuar"
+
+  utter_actuar_laboral_no:
+  - text: |
+      Quizá no haya confianza para acercarte, sin embargo aun así puedes crear un ambiente de seguridad.
+
+      Lo más importante es que si la persona desea hablar, deberás escucharla atentamente.
+      No la interrumpas para hacerle preguntas o para minimizar lo que te está contando.
+      Por ningún motivo la juzgues o la hagas sentir que lo que vivió es insignificante.
+
+      Cuando esté tranquila, puedes acercarte a ella para ofrecerle el teléfono de Línea Mujeres (55 5658 1111) y comentarle que hay psicólogas y abogadas que pueden orientarla de manera anónima.
+
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "¿Cómo ser una agente social?"
+      payload: "/agente_social"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_actuar"
+
+  utter_actuar_escolar_si:
+  - text: |
+      Lo más importante es crear un ambiente de confianza y escuchar atenta y cuidadosamente a la persona.
+
+      Si la víctima desea hablar, préstale atención mientras cuenta los detalles que ella quiera narrar.
+      Hazle sentir que le crees y que estás de su lado para apoyarla de la manera que ella decida.
+
+      Pudieron presentarse eventos muy delicados con personas de autoridad en la escuela así que entiende que la persona puede sentir miedo al hablar sobre lo que ha ocurrido.
+      Si los agresores fueron compañeros de clase, no los confrontes y piensa en el anonimato de la víctima.
+
+      Cuando sea un momento pertinente, después de que esté más tranquila y haya contado su historia, puedes darle el teléfono de Línea Mujeres (55 5658 1111) y decirle que hay psicólogas y abogadas que podrán escucharla de manera anónima.
+
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "¿Cómo ser una agente social?"
+      payload: "/agente_social"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_actuar"
+
+  utter_actuar_escolar_no:
+  - text: |
+      Quizá no haya confianza para acercarte, sin embargo aun así puedes crear un ambiente de seguridad.
+
+      Lo más importante es que si la persona desea hablar, deberás escucharla atentamente.
+      No la interrumpas para hacerle preguntas o para minimizar lo que te está contando.
+      Por ningún motivo la juzgues o la hagas sentir que lo que vivió es insignificante.
+
+      Si los agresores son otros alumnos, no los confrontes para guardar el anonimato de la víctima.
+      Apóyala de la manera en la que ella te diga que lo hagas.
+
+      Cuando esté tranquila, puedes acercarte a ella para ofrecerle el teléfono de Línea Mujeres (55 5658 1111) y comentarle que hay psicólogas y abogadas que pueden orientarla de manera anónima.
+
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "¿Cómo ser una agente social?"
+      payload: "/agente_social"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_actuar"
+
+  utter_actuar_espacio_pub_si:
+  - text: |
+      Lo más importante es crear un ambiente de confianza y escuchar atenta y cuidadosamente a la persona.
+
+      Si la víctima desea hablar, préstale atención mientras cuenta los detalles que ella quiera narrar.
+      Hazle sentir que le crees y que estás de su lado para apoyarla de la manera que ella decida.
+
+      Mientras te cuenta lo que le ocurrió en la calle, no la interrumpas ni cuentes cosas de tu vida.
+      En definitiva, no minimices lo que siente ni la juzgues.
+
+      Cuando sea un momento pertinente, después de que esté más tranquila y haya contado su historia, puedes darle el teléfono de Línea Mujeres (55 5658 1111) y decirle que hay psicólogas y abogadas que podrán escucharla de manera anónima.
+
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "¿Cómo ser una agente social?"
+      payload: "/agente_social"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_actuar"
+
+  utter_actuar_espacio_pub_no:
+  - text: |
+      Quizá no haya confianza para acercarte, sin embargo aun así puedes crear un ambiente de seguridad.
+
+      Lo más importante es que si la persona desea hablar, deberás escucharla atentamente.
+      No la interrumpas para hacerle preguntas o para minimizar lo que te está contando.
+      Por ningún motivo la juzgues o la hagas sentir que lo que vivió es insignificante.
+
+      Si los agresores son otros alumnos, no los confrontes para guardar el anonimato de la víctima.
+      Apóyala de la manera en la que ella te diga que lo hagas.
+
+      Cuando esté tranquila, puedes acercarte a ella para ofrecerle el teléfono de Línea Mujeres (55 5658 1111) y comentarle que hay psicólogas y abogadas que pueden orientarla de manera anónima.
+
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "¿Cómo ser una agente social?"
+      payload: "/agente_social"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_actuar"
+
+  utter_actuar_digital_medios_si:
+  - text: |
+      Lo más importante es crear un ambiente de confianza y escuchar atenta y cuidadosamente a la persona.
+
+      Si la víctima desea hablar, préstale atención mientras cuenta los detalles que ella quiera narrar.
+      Hazle sentir que le crees y que estás de su lado para apoyarla de la manera que ella decida.
+
+      Si hay fotografías o videos íntimos, no los veas ni los compartas con nadie.
+      Puede ser conveniente que primero cuente la situación así que evita que mire el celular o la computadora, si ahí se encuentran las agresiones.
+
+      Cuando sea un momento pertinente, después de que esté más tranquila y haya contado su historia, puedes darle el teléfono de Línea Mujeres (55 5658 1111) y decirle que hay psicólogas y abogadas que podrán escucharla de manera anónima.
+
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "¿Cómo ser una agente social?"
+      payload: "/agente_social"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_actuar"
+
+  utter_actuar_digital_medios_no:
+  - text: |
+      Quizá no haya confianza para acercarte, sin embargo aun así puedes crear un ambiente de seguridad.
+
+      Lo más importante es que si la persona desea hablar, deberás escucharla atentamente.
+      No la interrumpas para hacerle preguntas o para minimizar lo que te está contando.
+
+      Si tú tienes fotografías, audios o videos íntimos de la víctima o de cualquier otra persona, elimínalos y no los compartas con nadie.
+
+      Cuando esté tranquila, puedes acercarte a ella para ofrecerle el teléfono de Línea Mujeres (55 5658 1111) y comentarle que hay psicólogas y abogadas que pueden orientarla de manera anónima.
+
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "¿Cómo ser una agente social?"
+      payload: "/agente_social"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_actuar"
+
+  utter_actuar_politica_si:
+  - text: |
+      Lo más importante es crear un ambiente de confianza y escuchar atenta y cuidadosamente a la persona.
+
+      Si la víctima desea hablar, préstale atención mientras cuenta los detalles que ella quiera narrar.
+      Hazle sentir que le crees y que estás de su lado para apoyarla de la manera que ella decida.
+
+      Pudieron presentarse eventos muy delicados con personas de autoridad en oficinas de gobierno así que entiende que la persona puede sentir miedo al hablar sobre lo que ha ocurrido. Hazle preguntas específicas sobre lo que sucedió y ten paciencia si se toma más tiempo para pensar y responder.
+
+      Cuando sea un momento pertinente, después de que esté más tranquila y haya contado su historia, puedes darle el teléfono de Línea Mujeres (55 5658 1111) y decirle que hay psicólogas y abogadas que podrán escucharla de manera anónima.
+
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "¿Cómo ser una agente social?"
+      payload: "/agente_social"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_actuar"
+
+  utter_actuar_politica_no:
+  - text: |
+      Lo más importante es crear un ambiente de confianza y escuchar atenta y cuidadosamente a la persona.
+
+      Si la víctima desea hablar, préstale atención mientras cuenta los detalles que ella quiera narrar.
+      Hazle sentir que le crees y que estás de su lado para apoyarla de la manera que ella decida.
+
+      Acompáñala a denunciar la agresión por parte de un/a funcionario/a si te lo pide y guarda silencio mientras ella habla sobre lo que ocurrió.
+
+      Cuando sea un momento pertinente, después de que esté más tranquila y haya contado su historia, puedes darle el teléfono de Línea Mujeres (55 5658 1111) y decirle que hay psicólogas y abogadas que podrán escucharla de manera anónima.
+
+    buttons:
+    - title: "Ver otro contexto donde ocurre violencia de genero"
+      payload: "/aprender"
+    - title: "¿Cómo ser una agente social?"
+      payload: "/agente_social"
+    - title: "Terminar por hoy"
+      payload: "/finalizar_actuar"
+
+
+
 
 session_config:
   session_expiration_time: 60
